@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle, #ffcccc, #ff4d6d);
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        text-align: center;
+        position: relative;
+        animation: rotate 10s linear infinite;
+    }
+
+    /* trái tim */
+    .heart {
+        width: 100px;
+        height: 100px;
+        background: pink;
+        position: relative;
+        transform: rotate(-45deg);
+        margin: 0 auto;
+    }
+
+    .heart::before,
+    .heart::after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background: pink;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .heart::before {
+        top: -50px;
+        left: 0;
+    }
+
+    .heart::after {
+        left: 50px;
+        top: 0;
+    }
+
+    /* chữ */
+    .text {
+        margin-top: 40px;
+        color: white;
+        font-size: 18px;
+        text-shadow: 1px 1px 3px red;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @keyframes float {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="heart"></div>
+    <div class="text">
+        <p>anh iu em bé ❤️</p>
+        <p>anh xin lỗi 💔</p>
+    </div>
+</div>
+
+</body>
+</html>
